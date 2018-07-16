@@ -41,4 +41,4 @@ to return a sequence declared by [the ```@IdSequence``` annotation](https://gith
         }
     }
     ```
-    See an example in [Foo.java](https://github.com/aleksey-stukalov/own-sequence/blob/master/modules/global/src/com/company/sample/entity/Foo.java).        
+        See an example in [Foo.java](https://github.com/aleksey-stukalov/own-sequence/blob/master/modules/global/src/com/company/sample/entity/Foo.java).        
