@@ -18,3 +18,27 @@ to return a sequence declared by [the ```@IdSequence``` annotation](https://gith
 2. Register your bean in `spring.xml`.
 
 3. Add `cuba.numberIdCacheSize = 1` to both `app.properties` and `web-app.properties`.
+
+4. After these steps you will be able to declare sequence name as it is shown here:
+
+    ```java
+    @NamePattern("%s|name")
+    @Table(name = "SAMPLE_FOO")
+    @Entity(name = "sample$Foo")
+    @IdSequence(name = "FOO_SEQ")
+    public class Foo extends BaseLongIdEntity {
+        private static final long serialVersionUID = 3829069098132933599L;
+
+        @Column(name = "NAME")
+        protected String name;
+    
+        public void setName(String name) {
+            this.name = name;
+        }
+    
+        public String getName() {
+            return name;
+        }
+    }
+    ```
+    See an example in [Foo.java](https://github.com/aleksey-stukalov/own-sequence/blob/master/modules/global/src/com/company/sample/entity/Foo.java).        
